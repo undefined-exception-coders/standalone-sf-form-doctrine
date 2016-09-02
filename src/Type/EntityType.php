@@ -70,11 +70,12 @@ class EntityType extends AbstractType
             };
         };
 
-        $resolver->setRequired(['class','property']);
+        $resolver->setRequired(['property']);
 
         $resolver->setDefaults([
             'em' => $this->entityManager,
             'choices' => null,
+            'class' => null,
             'property' => null,
             'query_builder' => null,
         ]);
